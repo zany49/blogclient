@@ -72,7 +72,7 @@ const Search =()=> {
     return (
         <>
         <form className="form-inline  row" onSubmit={searchUser}>
-            <div className="col-10">
+            <div className="col-12 d-flex justify-space-between">
             <input 
             type="search" 
             onChange={(e)=>{setQuery(e.target.value)
@@ -82,10 +82,12 @@ const Search =()=> {
             className="form-control " 
             placeholder="Search User"
             />
+            
+             <button className="btn btn-outline-success" type="submit">Search</button> 
             </div>
-            <div className="col-2">
+            {/* <div className="col-2">
             <button className="btn btn-outline-primary " type="submit">Search</button> 
-            </div>
+            </div> */}
             
         </form>
         {result && result.map((r)=><People key={r._id} people={result} handleFollow={handleFollow} handleUnfollow={handleUnfollow}/>)}

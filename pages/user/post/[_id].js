@@ -73,7 +73,7 @@ const EditPost=()=>{
      return(
         <UseRoute>
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
+            <div className="row py-5  text-light">
                 <div className="col text-center">
                     <h1>News Feed</h1>
                 </div>

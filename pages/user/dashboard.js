@@ -233,7 +233,7 @@ const handleUnlike = async (_id)=>{
 
     return(
         <UseRoute>
-        <div className="container-fluid">
+        <div className="container-fluid body">
             <div className="row py-5 text-light">
                 <div className="col text-center">
                     <h1>News Feed</h1>
@@ -242,7 +242,6 @@ const handleUnlike = async (_id)=>{
             <div className="row py-3">
                 <div className="col-md-8">
                   <Search />
-                    <br/>
                     <br/>
                     <PostForm
                     content={content}
@@ -261,6 +260,7 @@ const handleUnlike = async (_id)=>{
                     handleUnlike={handleUnlike}
                     handleComment={handleComment}
                     removeComment={removeComment}
+                    page="post"
                     />
                     {/* {totalpost} */}
                     <Pagination 

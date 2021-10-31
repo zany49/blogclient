@@ -11,7 +11,7 @@ import Link from "next/link";
 import Post from "../../components/cards/post"
 
 
- const PostList =({posts,handleDelete,handleLike,handleUnlike,handleComment,removeComment})=>{
+ const PostList =({posts,handleDelete,handleLike,handleUnlike,handleComment,removeComment,page})=>{
    
     const[state] = useContext(UserContext);
     const router = useRouter()
@@ -29,6 +29,7 @@ import Post from "../../components/cards/post"
              handleDelete={handleDelete} 
             handleUnlike={handleUnlike}
             removeComment={removeComment}
+            page="post"
             />
             )} 
             </>

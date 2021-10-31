@@ -19,7 +19,8 @@ import Link from "next/link";
     handleUnlike,
     handleComment,
     commentsCount =2,
-    removeComment
+    removeComment,
+    page
 })=>{
    
     const[state] = useContext(UserContext);
@@ -51,27 +52,38 @@ import Link from "next/link";
                         {post.image && <PostImages url={post.image.url} />}
                     <div className="d-flex pt-2">
 
+                    { page !== "post" &&
+                        <>
                     {state&& state.user && post.likes && post.likes.includes(state.user._id) ?
                      (<HeartFilled className="text-danger p-2 h5" onClick={()=>handleUnlike(post._id)} />)
                      :
                     (
                     <HeartOutlined className="text-danger p-2 h5" onClick={()=>handleLike(post._id)} />) 
                 }
-
-                    <div className="pt-2 pl-3">{post.likes.length} likes
                    
-                    </div>
-                    
+                    <div className="pt-2 pl-3">{post.likes.length} likes </div>
+                    </>}
 
-                    <CommentOutlined 
+                    { page !== "post" &&
+                        <>
+                        <CommentOutlined 
                     onClick={()=>handleComment(post)}
                     className="text-danger p-2 h5 pl-5" />
 
                     <div className="pt-2 pl-3">
-                      <Link href={`/posts/${post._id}`}>  
-                       <a> {post.comments.length} comments </a> 
-                        </Link>
+                       {post.comments.length} comments 
+                        
                     </div>
+                    <br/>
+                    <br/>
+                    </>}
+
+                   { page === "post" &&
+                    <div className="pt-2 pl-3">
+                      <Link href={`/posts/${post._id}`}>  
+                       <a> <button className="btn btn-outline-success"> view post </button> </a> 
+                        </Link>
+                    </div>}
   
   
   

@@ -110,8 +110,8 @@ const ProfileUpdate = () => {
 
 
     return(
-        <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
+        <div className="container-fluid body">
+            <div className="row py-5  text-light">
                 <div className="col text-center">
                     <h1>ProfileUpdate</h1>
                 </div>

@@ -26,6 +26,7 @@ const PostComments = ()=>{
     const fetchPost= async ()=>{
         try{
             const {data} = await axios.get(`/user-posts/${_id}`);
+            console.log(data)
             setPost(data)
         }catch(err){
             console.log(err);
@@ -104,9 +105,9 @@ const PostComments = ()=>{
 
     return (
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
+            <div className="row py-5 text-light">
                 <div className="col text-center">
-                    <h1>Comment section</h1>
+                    <h1>View Post</h1>
                 </div>
             </div>
             
