@@ -7,7 +7,7 @@ import { UserContext } from "../../context";
 import {useRouter} from "next/router";
 
 import ForgotPasswordForm from "../../components/forms/forgotpassform";
-
+import {Card} from 'antd';
 
 const ForgotPassword = () => {
    
@@ -62,14 +62,18 @@ const ForgotPassword = () => {
 
     return(
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
-                <div className="col text-center">
-                    <h1>Forgot Password</h1>
-                </div>
-            </div>
+          
             
             <div className="row py-5">
                 <div className="col-md-6 offset-md-3">
+                <Card hoverable>
+         <div className="row">
+                        <div className="">
+                            <h4 className="d-flex justify-content-center">RESET-PASSWORD</h4>
+                            <hr />
+                        </div>
+
+                    </div>
 
                   <ForgotPasswordForm
                   handleSubmit={handleSubmit}
@@ -79,7 +83,7 @@ const ForgotPassword = () => {
                   setNewPassword={setNewPassword}
                   loading={loading}
                   />
-
+                  </Card>
                 </div>
 
             </div>

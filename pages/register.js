@@ -7,7 +7,7 @@ import { UserContext } from "../context";
 import {useRouter} from "next/router";
 
 import AuthForm from "../components/forms/authform";
-
+import {Card} from 'antd';
 
 const Register = () => {
    
@@ -57,14 +57,19 @@ const Register = () => {
 
     return(
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
-                <div className="col text-center">
-                    <h1>Register</h1>
-                </div>
-            </div>
+            
             
             <div className="row py-5 ">
                 <div className="col-md-6 offset-md-3">
+
+                <Card  hoverable>
+                <div className="row">
+                        <div className="col">
+                            <h4 className="d-flex justify-content-center">REGISTER</h4>
+                            <hr />
+                        </div>
+
+                    </div>
 
                   <AuthForm 
                  
@@ -79,7 +84,7 @@ const Register = () => {
                   setSecret={setSecret}
                   loading={loading}
                   />
-
+                </Card>
                 </div>
 
             </div>

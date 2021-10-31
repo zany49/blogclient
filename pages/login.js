@@ -6,6 +6,8 @@ import Link from 'next/link';
 import AuthForm from "../components/forms/authform";
 import {useRouter} from "next/router";
 import {UserContext} from '../context';
+import {Card} from 'antd';
+
 
 const Login = () => {
    
@@ -53,15 +55,18 @@ const Login = () => {
 
     return(
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
-                <div className="col text-center">
-                    <h1>Login</h1>
-                </div>
-            </div>
-            
+           
             <div className="row py-5">
                 <div className="col-md-6 offset-md-3">
+                {/* title='LOGIN' */}
+                <Card hoverable >
+                    <div className="row">
+                        <div className="col">
+                            <h4 className="d-flex justify-content-center">LOGIN</h4>
+                            <hr />
+                        </div>
 
+                    </div>
                   <AuthForm 
                   handleSubmit={handleSubmit}
                   
@@ -74,7 +79,7 @@ const Login = () => {
                   loading={loading}
                   page="login"
                   />
-
+                </Card>
                 </div>
 
             </div>

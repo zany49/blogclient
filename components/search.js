@@ -72,7 +72,7 @@ const Search =()=> {
     return (
         <>
         <form className="form-inline  row" onSubmit={searchUser}>
-            <div className="col-8">
+            <div className="col-10">
             <input 
             type="search" 
             onChange={(e)=>{setQuery(e.target.value)
@@ -83,7 +83,7 @@ const Search =()=> {
             placeholder="Search User"
             />
             </div>
-            <div className="col-4">
+            <div className="col-2">
             <button className="btn btn-outline-primary " type="submit">Search</button> 
             </div>
             

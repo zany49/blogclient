@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { UserContext } from "../context";
 import {useRouter} from "next/router";
 import { SyncOutlined } from "@ant-design/icons";
+import {Card} from 'antd';
 
 
 
@@ -55,15 +56,20 @@ const RestPassword = () => {
 
     return(
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
-                <div className="col text-center">
-                    <h1>Reset Password</h1>
-                </div>
-            </div>
+            
+
             
             <div className="row py-5">
                 <div className="col-md-6 offset-md-3">
          <form onSubmit={handleSubmit}>
+         <Card hoverable>
+         <div className="row">
+                        <div className="">
+                            <h4 className="d-flex justify-content-center">RESET-PASSWORD</h4>
+                            <hr />
+                        </div>
+
+                    </div>
                 <div className="form-group py-3">
                           <small><label className="text-muted">Email</label></small>
                           <input type="text" className="form-control" placeholder="email"
@@ -76,14 +82,17 @@ const RestPassword = () => {
                       <button
                        disabled={   !email ||  loading} 
                       type="submit" 
-                      className=" btn btn-primary col-md-12">
+                      className=" btn btn-outline-success col-12">
                           {loading? <SyncOutlined spin className="py-1" /> :"Submit"}
                           </button>
                       </div>
+                      </Card>
                       </form>
                 </div>
 
             </div>
+           
+
             <div className="row">
                 <div className="col">
                     <Modal 

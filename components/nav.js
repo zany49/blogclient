@@ -28,7 +28,7 @@ const Nav =()=>{
   }
 
     return(
-        <nav className="nav  d-flex justify-content-between" style={{backgroundColor:"blue"}}>
+        <nav className="nav navbar-light d-flex justify-content-between" style={{backgroundColor:"#92D386"}}>
         <Link  href="/" >
           <a className="nav-link text-light logo" >
             <Avatar src="/images/logo.png" />  BlogBucket</a>

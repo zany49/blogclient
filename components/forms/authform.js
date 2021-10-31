@@ -91,7 +91,7 @@ const AuthForm =({
                          page === "login" ?  !email||!password 
                        : !email || !password || !secret || loading} 
                       type="submit" 
-                      className=" btn btn-primary col-md-12">
+                      className=" btn btn-outline-success col-12">
                           {loading? <SyncOutlined spin className="py-1" /> :"Submit"}
                           </button>
                       </div>

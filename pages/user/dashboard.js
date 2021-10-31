@@ -234,13 +234,16 @@ const handleUnlike = async (_id)=>{
     return(
         <UseRoute>
         <div className="container-fluid">
-            <div className="row py-5 bg-default-image text-light">
+            <div className="row py-5 text-light">
                 <div className="col text-center">
                     <h1>News Feed</h1>
                 </div>
             </div>
             <div className="row py-3">
                 <div className="col-md-8">
+                  <Search />
+                    <br/>
+                    <br/>
                     <PostForm
                     content={content}
                     setContent={setContent}
@@ -271,9 +274,7 @@ const handleUnlike = async (_id)=>{
                     {/* <pre>{JSON.stringify(post,null , 4)}</pre> */}
                     <div className="col-md-4">
                     {/* <pre>{JSON.stringify(people,null , 4)}</pre> */}
-                    <Search />
-                    <br/>
-                    <br/>
+                    
                     {state && state.user && state.user.following && (
                         <Link href={`/user/following`}>
                         <a className="h6">following ({state.user.following.length})</a>
