@@ -59,7 +59,7 @@ const handleUnfollow = async (user)=>{
 
 
     return (
-        
+        <div className="container-fluid body" style={{height:"100vh"}} >
             <div className="row col-md-6 offset-md-3">
             {/* <pre>{JSON.stringify(people,null,4)}</pre> */}
             <List
@@ -89,7 +89,7 @@ const handleUnfollow = async (user)=>{
                 </Link>
             
             </div>
-        
+            </div>
     )
 } 
 

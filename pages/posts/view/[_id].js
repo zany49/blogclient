@@ -41,7 +41,7 @@ const SinglePost =({post})=>{
         {head()}
         <ParallaxBg url="">Blog Bucket</ParallaxBg>
         {/* <pre>{JSON.stringify(posts,null,4)}</pre> */}
-        <div className="container body">
+        <div className="container-fluid body">
             <div className="row pt-5">
             
                 <div className="col-md-8 offset-md-2">
