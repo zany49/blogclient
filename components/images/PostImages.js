@@ -7,8 +7,7 @@ const PostImages = ({url})=>{
             backgroundRepeat:'no-repeat',
             backgroundPosition:'center center',
             backgroundSize:"cover",
-            height:"300px",
-
+            height:"300px"
         }}
         
         
