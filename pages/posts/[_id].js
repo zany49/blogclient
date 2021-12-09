@@ -104,7 +104,7 @@ const PostComments = ()=>{
     }
 
     return (
-        <div className="container-fluid body">
+        <div className="container-fluid body" style={{height:"100vh"}}>
             <div className="row py-5 text-light">
                 <div className="col text-center">
                     <h1>View Post</h1>
